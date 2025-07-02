@@ -14,11 +14,13 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css?v=6.0">
     <link rel="stylesheet" href="css/enhanced.css?v=7.0">
+    <link rel="stylesheet" href="css/responsive.css?v=7.0">
     <link rel="stylesheet" href="css/ripple-animations.css?v=6.0">
 </head>
 <body>
     <!-- Hero Section -->
     <section class="hero-section" id="hero">
+        <div class="hero-arch"></div>
         <div class="container">
             <div class="hero-content">
                 <div class="badge animate-on-scroll fade-in">
@@ -130,49 +132,57 @@
             <div class="benefits-grid">
                 <div class="benefit-card animate-on-scroll slide-up delay-100">
                     <div class="benefit-icon">💰</div>
-                    <h3 class="benefit-title">20% Lifetime Commission</h3>
-                    <p class="benefit-description">Earn recurring revenue from every client, every month, forever. No caps, no limits.</p>
-                    <div class="benefit-highlight">$500/month per client = $100/month for you</div>
+                    <div class="benefit-content">
+                        <h3 class="benefit-title">20% Lifetime Commission</h3>
+                        <p class="benefit-description">Earn recurring revenue from every client, every month, forever. No caps, no limits.</p>
+                        <div class="benefit-highlight">$500/month per client = $100/month for you</div>
+                    </div>
                 </div>
                 
                 <div class="benefit-card animate-on-scroll slide-up delay-200">
                     <div class="benefit-icon">🚀</div>
-                    <h3 class="benefit-title">Zero Fulfillment Burden</h3>
-                    <p class="benefit-description">We handle all technical implementation and ongoing maintenance. You focus on sales.</p>
-                    <div class="benefit-highlight">100% hands-off operation</div>
+                    <div class="benefit-content">
+                        <h3 class="benefit-title">Zero Fulfillment Burden</h3>
+                        <p class="benefit-description">We handle all technical implementation and ongoing maintenance. You focus on sales.</p>
+                        <div class="benefit-highlight">100% hands-off operation</div>
+                    </div>
                 </div>
                 
                 <div class="benefit-card animate-on-scroll slide-up delay-300">
                     <div class="benefit-icon">🛡️</div>
-                    <h3 class="benefit-title">No Support Required</h3>
-                    <p class="benefit-description">Our team provides all client support—you just collect commissions without any headaches.</p>
-                    <div class="benefit-highlight">24/7 support included</div>
+                    <div class="benefit-content">
+                        <h3 class="benefit-title">No Support Required</h3>
+                        <p class="benefit-description">Our team provides all client support—you just collect commissions without any headaches.</p>
+                        <div class="benefit-highlight">24/7 support included</div>
+                    </div>
                 </div>
                 
                 <div class="benefit-card animate-on-scroll slide-up delay-400">
                     <div class="benefit-icon">🎯</div>
-                    <h3 class="benefit-title">Branded Portal</h3>
-                    <p class="benefit-description">Get your own white-labeled reseller portal with full tracking and marketing materials.</p>
-                    <div class="benefit-highlight">Professional dashboard included</div>
+                    <div class="benefit-content">
+                        <h3 class="benefit-title">Branded Portal</h3>
+                        <p class="benefit-description">Get your own white-labeled reseller portal with full tracking and marketing materials.</p>
+                        <div class="benefit-highlight">Professional dashboard included</div>
+                    </div>
                 </div>
             </div>
             
             <!-- Stats Section -->
             <div class="stats-grid animate-on-scroll fade-in delay-500">
                 <div class="stat-card">
-                    <span class="stat-number">20%</span>
+                    <span class="stat-number" style="color: #8b5cf6 !important; -webkit-text-fill-color: #8b5cf6 !important;">20%</span>
                     <span class="stat-label">Lifetime Commission</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">0</span>
+                    <span class="stat-number" style="color: #8b5cf6 !important; -webkit-text-fill-color: #8b5cf6 !important;">0</span>
                     <span class="stat-label">Support Burden</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">24/7</span>
+                    <span class="stat-number" style="color: #8b5cf6 !important; -webkit-text-fill-color: #8b5cf6 !important;">24/7</span>
                     <span class="stat-label">Client Support</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">100%</span>
+                    <span class="stat-number" style="color: #8b5cf6 !important; -webkit-text-fill-color: #8b5cf6 !important;">100%</span>
                     <span class="stat-label">White Label</span>
                 </div>
             </div>
@@ -469,8 +479,9 @@
             <div class="final-cta-content animate-on-scroll fade-in">
                 <h2 class="final-cta-headline">Launch Your Branded Reseller Portal Today</h2>
                 <p class="final-cta-subheadline">Join the AI visibility revolution. Start earning 20% lifetime commissions with zero fulfillment burden.</p>
-                <a href="/reseller-onboarding" class="final-cta-button">Become a Reseller Now</a>
                 <p class="final-cta-subtext">Setup takes less than 5 minutes. Start selling within 24 hours.</p>
+                <div style="margin-top: 40px;"></div>
+                <a href="/reseller-onboarding" class="final-cta-button" style="display: inline-block; padding: 1rem 2rem; font-size: 1.25rem; font-weight: 700; text-align: center; text-decoration: none; background: linear-gradient(135deg, #ffffff 0%, #8b5cf6 100%); color: #6d28d9; border-radius: 8px; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); margin-top: 20px;">Become a Reseller Now</a>
             </div>
         </div>
     </section>
