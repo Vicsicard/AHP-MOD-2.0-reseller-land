@@ -211,7 +211,7 @@ body {
 }
 
 /* Keyframe Animations */
-/* @keyframes gradientFlow - REMOVED TO ELIMINATE SWEEP/CURTAIN EFFECT */
+/* Keyframe Animations */
 
 @keyframes float {
     0% { transform: translateY(0px); }
@@ -388,17 +388,7 @@ body.loaded .animate-on-scroll {
     pointer-events: none;
 }
 
-.hero-section::after {
-    content: "";
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background: var(--white);
-    clip-path: ellipse(70% 60% at 50% 100%);
-    z-index: 2;
-}
+/* Removed hero-section::after overlay (sweep/curtain effect) */
 
 .hero-content {
     position: relative;

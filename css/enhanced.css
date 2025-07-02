@@ -39,7 +39,7 @@
     --transition-base: 0.3s ease;
 }
 
-/* ===== ALL SPECTACULAR KEYFRAME ANIMATIONS REMOVED TO ELIMINATE CURTAIN EFFECT ===== */
+/* ===== SPECTACULAR KEYFRAME ANIMATIONS ===== */
 
 @keyframes float {
     0%, 100% {
@@ -181,7 +181,7 @@ body {
 }
 
 /* Animations */
-/* @keyframes gradientFlow - REMOVED TO ELIMINATE SWEEP/CURTAIN EFFECT */
+/* @keyframes gradientFlow */
 
 @keyframes slideUp {
     from {
@@ -255,17 +255,7 @@ body {
     z-index: 1;
 }
 
-.hero-section::after {
-    content: "";
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background: var(--white);
-    clip-path: ellipse(70% 60% at 50% 100%);
-    z-index: 2;
-}
+/* Removed hero-section::after overlay (sweep/curtain effect) - confirmed removed */
 
 .hero-content {
     position: relative;
@@ -413,17 +403,7 @@ body {
     overflow: hidden;
 }
 
-.problem-section::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background: var(--white);
-    clip-path: ellipse(70% 60% at 50% 0%);
-    z-index: 1;
-}
+/* Removed problem-section::before overlay (sweep/curtain effect) */
 
 .problem-section .container {
     position: relative;
@@ -439,17 +419,7 @@ body {
     overflow: hidden;
 }
 
-.solution-section::before {
-    content: '';
-    position: absolute;
-    top: -100px;
-    left: 0;
-    width: 100%;
-    height: 200px;
-    background: var(--dark-light);
-    clip-path: ellipse(70% 60% at 50% 0%);
-    z-index: 1;
-}
+/* Removed solution-section::before overlay (sweep/curtain effect) */
 
 .solution-section .container {
     position: relative;
@@ -580,7 +550,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 
-    /* animation: gradientShift 8s ease-in-out infinite; - REMOVED TO ELIMINATE CURTAIN EFFECT */
+    /* animation: gradientShift 8s ease-in-out infinite; */
 }
 
 .problem-section .section-description {
@@ -709,7 +679,7 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 
-    /* animation: gradientShift 8s ease-in-out infinite; - REMOVED TO ELIMINATE CURTAIN EFFECT */
+    /* animation: gradientShift 8s ease-in-out infinite; */
 }
 
 .solution-section .section-description {
@@ -831,21 +801,7 @@ body {
 .hero-section::after,
 .problem-section::after,
 .solution-section::after,
-.client-value-section::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: 
-        radial-gradient(circle at 20% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 40% 60%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
-    pointer-events: none;
-    z-index: 1;
-
-}
+/* Removed client-value-section::after overlay (sweep/curtain effect) */
 
 /* Enhanced CTA Buttons */
 .cta-button {
@@ -977,8 +933,8 @@ body {
 
 /* ===== SPECTACULAR ADVANCED UI/UX ENHANCEMENTS ===== */
 
-/* Particle Effect Background - REMOVED TO ELIMINATE CURTAIN EFFECT */
-/* All particle system CSS has been removed to eliminate the curtain/sweep effect */
+/* Particle Effect Background */
+/* All particle system CSS has been removed */
 
 /* Advanced Hover Effects */
 .hover-lift {
@@ -1052,11 +1008,11 @@ body {
         #ff0080 75%,
         #ff8c00 100%
     );
-    /* background-size: 400% 400%; - REMOVED TO ELIMINATE CURTAIN EFFECT */
+    /* background-size: 400% 400%; */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* animation: gradientShift 3s ease infinite; - REMOVED TO ELIMINATE CURTAIN EFFECT */
+    /* animation: gradientShift 3s ease infinite; */
 }
 
 /* 3D Perspective Cards */
@@ -1293,7 +1249,7 @@ body {
     top: -50%;
     left: -50%;
     /* width: 200%;
-    height: 200%; - REMOVED TO ELIMINATE SWEEP/CURTAIN EFFECT */
+    height: 200%; */
     width: 100%;
     height: 100%;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
@@ -1316,7 +1272,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* animation: gradientShift 8s ease-in-out infinite; - REMOVED TO ELIMINATE CURTAIN EFFECT */
+    /* animation: gradientShift 8s ease-in-out infinite; */
 
 }
 
@@ -1386,7 +1342,7 @@ body {
     top: -50%;
     left: -50%;
     /* width: 200%;
-    height: 200%; - REMOVED TO ELIMINATE SWEEP/CURTAIN EFFECT */
+    height: 200%; */
     width: 100%;
     height: 100%;
     background: radial-gradient(circle, rgba(139, 92, 246, 0.3) 0%, transparent 70%);
@@ -1482,7 +1438,7 @@ body {
     animation: pulse 2s ease-in-out infinite;
 }
 
-/* Keyframe for gradient text animation - REMOVED TO ELIMINATE SWEEP/CURTAIN EFFECT */
+/* Keyframe for gradient text animation */
 
 /* Enhanced Client Value Section */
 .client-value-section {
@@ -1512,7 +1468,7 @@ body {
     top: -50%;
     left: -50%;
     /* width: 200%;
-    height: 200%; - REMOVED TO ELIMINATE SWEEP/CURTAIN EFFECT */
+    height: 200%; */
     width: 100%;
     height: 100%;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ffffff" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
@@ -1533,7 +1489,7 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    /* animation: gradientShift 8s ease-in-out infinite; - REMOVED TO ELIMINATE CURTAIN EFFECT */
+    /* animation: gradientShift 8s ease-in-out infinite; */
 }
 
 .client-value-section .section-subtitle {

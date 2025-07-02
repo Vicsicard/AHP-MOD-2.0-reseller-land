@@ -3,51 +3,22 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ===== SCROLL PROGRESS INDICATOR =====
+    // ===== SCROLL PROGRESS INDICATOR ===== (REMOVED)
     function createScrollProgress() {
-        const progressBar = document.createElement('div');
-        progressBar.className = 'scroll-progress';
-        progressBar.innerHTML = '<div class="scroll-progress-bar"></div>';
-        document.body.appendChild(progressBar);
-        
-        const progressBarFill = progressBar.querySelector('.scroll-progress-bar');
-        
-        window.addEventListener('scroll', () => {
-            const scrollTop = window.pageYOffset;
-            const docHeight = document.body.scrollHeight - window.innerHeight;
-            const scrollPercent = (scrollTop / docHeight) * 100;
-            progressBarFill.style.width = scrollPercent + '%';
-        });
+        // Functionality completely removed
+        console.log('Scroll progress indicator removed');
     }
     
     // ===== INTERSECTION OBSERVER FOR ANIMATIONS =====
     function initScrollAnimations() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+        // Completely disabled to remove sweep/curtain effect
+        console.log('Scroll animations disabled to eliminate sweep/curtain effect');
         
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
-                    
-                    // Add staggered animations for cards
-                    if (entry.target.classList.contains('stagger-parent')) {
-                        const children = entry.target.querySelectorAll('.stagger-child');
-                        children.forEach((child, index) => {
-                            setTimeout(() => {
-                                child.classList.add('animate-in');
-                            }, index * 100);
-                        });
-                    }
-                }
-            });
-        }, observerOptions);
-        
-        // Observe all sections and animated elements
-        document.querySelectorAll('section, .animate-on-scroll, .section-title').forEach(el => {
-            observer.observe(el);
+        // Instead of animating elements on scroll, make them all visible immediately
+        document.querySelectorAll('section, .animate-on-scroll, .section-title, .stagger-parent, .stagger-child').forEach(el => {
+            // Add the in-view class to all elements immediately
+            el.classList.add('in-view');
+            el.classList.add('animate-in');
         });
     }
     
@@ -134,10 +105,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // ===== PARTICLE SYSTEM ===== (REMOVED TO ELIMINATE CURTAIN EFFECT)
+    // ===== PARTICLE SYSTEM =====
     function createParticleSystem() {
-        // Completely disabled to remove curtain/sweep effect
-        console.log('Particle system disabled to eliminate curtain/sweep effect');
+        // System disabled
+        console.log('Particle system disabled');
     }
     
     // ===== ENHANCED CARD INTERACTIONS =====
@@ -280,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log('🚀 AHP Mod 2.0 Spectacular UI/UX Initialized!');
     }
     
-    // Start the magic
+    // Start the magic (with scroll progress indicator removed)
     init();
 });
 

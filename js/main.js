@@ -37,32 +37,28 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Advanced Scroll Animation Manager
+    // Advanced Scroll Animation Manager - DISABLED to remove sweep/curtain effect
     class ScrollAnimationManager {
         constructor() {
-            this.observerOptions = {
-                threshold: [0.1, 0.3, 0.5],
-                rootMargin: '0px 0px -50px 0px'
-            };
+            console.log('ScrollAnimationManager disabled to eliminate sweep/curtain effect');
             
-            this.observer = new IntersectionObserver(
-                this.handleIntersection.bind(this),
-                this.observerOptions
-            );
+            // Instead of setting up animations, make all elements visible immediately
+            document.querySelectorAll('.animate-on-scroll, .fade-in, .slide-up, .slide-in-left, .slide-in-right').forEach(el => {
+                el.style.opacity = '1';
+                el.style.transform = 'none';
+                el.style.transition = 'none';
+                el.classList.add('in-view');
+                el.classList.add('visible');
+            });
             
-            this.animatedElements = new Set();
+            // Only keep non-animation related functionality
             this.setupScrollProgress();
             this.setupRippleEffects();
-            this.observeElements();
         }
         
+        // Disabled animation handling
         handleIntersection(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting && entry.intersectionRatio >= 0.1) {
-                    this.animateElement(entry.target);
-                    this.observer.unobserve(entry.target);
-                }
-            });
+            // Do nothing - animations disabled
         }
         
         animateElement(element) {
@@ -81,10 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         
         observeElements() {
-            const elements = document.querySelectorAll('.animate-on-scroll');
-            elements.forEach(el => {
-                this.observer.observe(el);
-            });
+            // Disabled to remove sweep/curtain effect
+            console.log('observeElements disabled to eliminate sweep/curtain effect');
+            // No elements will be observed for animations
         }
         
         setupScrollProgress() {
