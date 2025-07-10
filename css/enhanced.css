@@ -229,8 +229,9 @@ body {
 
 /* Hero Section */
 .hero-section {
-    background: var(--gradient-dark);
-
+    background: linear-gradient(120deg, #8b5cf6, #10b981, #f59e0b, #8b5cf6 100%);
+    background-size: 300% 300%;
+    animation: heroGradientMove 18s ease-in-out infinite;
     color: var(--white);
     padding: 8rem 0;
     text-align: center;
@@ -325,23 +326,54 @@ body {
     flex-wrap: wrap;
 }
 
+/* Split Text Animation for Hero Title */
+.split-word {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(32px) scale(0.95);
+    transition: none;
+    filter: blur(2px);
+}
+.split-word.split-animate-in {
+    animation: splitFadeUp 0.7s cubic-bezier(0.4,0,0.2,1) forwards;
+}
+@keyframes splitFadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(32px) scale(0.95);
+        filter: blur(2px);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-4px) scale(1.03);
+        filter: blur(0.5px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
 /* Badge Elements */
 .badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     padding: 0.75rem 1.25rem;
-    background: rgba(139, 92, 246, 0.1);
+    background: rgba(139, 92, 246, 0.18);
     border-radius: var(--border-radius-full);
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--primary);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--white);
     margin-bottom: 1.5rem;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(139, 92, 246, 0.2);
+    border: 2px solid var(--primary);
     position: relative;
     overflow: hidden;
     transition: all var(--transition-base);
+    text-shadow: 0 1px 8px rgba(16, 24, 40, 0.25), 0 0px 2px rgba(139,92,246,0.15);
+    letter-spacing: 0.04em;
 }
 
 .badge::before {
@@ -509,8 +541,14 @@ body {
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 0.75rem;
-    color: var(--dark);
+    color: var(--white) !important;
     letter-spacing: -0.025em;
+}
+
+/* Force Automated Updates card text to white */
+.feature .feature-content h4,
+.feature .feature-content p {
+    color: var(--white) !important;
 }
 
 .feature-content p {
@@ -728,7 +766,14 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    color: var(--white);
 }
+
+/* Force all text in solution-feature to white, including deeply nested elements */
+.solution-feature, .solution-feature *, .solution-feature *:not(a) {
+    color: var(--white) !important;
+}
+
 
 .solution-feature:hover {
     transform: translateY(-5px);
@@ -854,6 +899,38 @@ body {
 .cta-button:active {
     transform: translateY(-1px) scale(1.02);
 }
+
+/* Ripple Effect for Buttons */
+.ripple-effect {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    pointer-events: none;
+    transform: scale(0);
+    animation: ripple-cta 0.6s linear;
+    z-index: 2;
+}
+@keyframes ripple-cta {
+    0% {
+        opacity: 0.7;
+        transform: scale(0);
+    }
+    80% {
+        opacity: 0.4;
+        transform: scale(2.5);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(3.5);
+    }
+}
+
+/* Glow Effect for CTA Buttons */
+.glow-effect {
+    box-shadow: 0 0 18px 6px rgba(139, 92, 246, 0.25), 0 0 32px 12px rgba(16, 185, 129, 0.15);
+    filter: brightness(1.08) saturate(1.15);
+}
+
 
 /* Enhanced Section Titles */
 .section-title {
